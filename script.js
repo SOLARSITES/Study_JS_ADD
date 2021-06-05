@@ -10,12 +10,14 @@ let getRandomNumber = function (randNum) {
 
 let getStart = function () {
   let randomNumber = getRandomNumber(100);
+
   let startGame = function () {
     let guessNum = prompt('Угадай число от 1 до 100');
     if (guessNum === null) {
       alert('Игра окончена');
       return;
     }
+
     if (isNumber(guessNum)) {
       let realNum = +guessNum;
       if (realNum > randomNumber) {
